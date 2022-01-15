@@ -5,6 +5,9 @@
 # def fib(n):
 #     return  n if n < 2 else fib(n-1) + fib(n-2)
 
+# getter / setter
+
+
 
 
 # cache = {}
@@ -17,6 +20,18 @@
 #         cache[n] = n if n < 2 else fib(n-1) + fib(n-2)
 #         return cache[n]
 
+
+cache = {} # setter
+
+def fib(n):
+    if n in cache:
+        return cache[n] # setter
+    else:
+        cache[n] = n if n < 2 else fib(n-2) + fib(n-1) # getter
+        return cache[n]  setter
+    
+    
+ 
 
 # def fib(n):
 #     def fib_acc(n, a, b):
